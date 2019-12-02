@@ -1,0 +1,44 @@
+{
+  "connection": "default",
+  "collectionName": "guests",
+  "info": {
+    "name": "guest",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "bio": {
+      "type": "text"
+    },
+    "email": {
+      "type": "email"
+    },
+    "podcasts": {
+      "collection": "podcast",
+      "via": "guests",
+      "dominant": true
+    },
+    "twitter": {
+      "type": "string"
+    },
+    "insta": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
+    }
+  }
+}

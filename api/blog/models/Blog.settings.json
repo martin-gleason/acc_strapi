@@ -1,0 +1,38 @@
+{
+  "connection": "default",
+  "collectionName": "blogs",
+  "info": {
+    "name": "blog",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "create_Date": {
+      "type": "date"
+    },
+    "publish_date": {
+      "type": "date"
+    },
+    "email": {
+      "type": "email"
+    },
+    "guest_post": {
+      "type": "boolean"
+    }
+  }
+}

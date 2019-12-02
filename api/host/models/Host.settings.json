@@ -1,0 +1,52 @@
+{
+  "connection": "default",
+  "collectionName": "hosts",
+  "info": {
+    "name": "host",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "headshot": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "bio": {
+      "type": "text"
+    },
+    "podcasts": {
+      "collection": "podcast",
+      "via": "hosts"
+    },
+    "author": {
+      "model": "author",
+      "via": "host"
+    },
+    "twitter": {
+      "type": "string"
+    },
+    "insta": {
+      "type": "string"
+    },
+    "facebook": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "connection": "default",
+  "collectionName": "authors",
+  "info": {
+    "name": "author",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "headshot": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "images": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "bio": {
+      "type": "text"
+    },
+    "host": {
+      "model": "host",
+      "via": "author"
+    }
+  }
+}

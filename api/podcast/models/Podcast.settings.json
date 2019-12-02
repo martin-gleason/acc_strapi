@@ -1,0 +1,54 @@
+{
+  "connection": "default",
+  "collectionName": "podcasts",
+  "info": {
+    "name": "podcast",
+    "description": "podcast model\n"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "audio_file": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": true
+    },
+    "pod_title": {
+      "type": "string"
+    },
+    "pod_upload_date": {
+      "type": "date"
+    },
+    "episode_number": {
+      "type": "integer",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "pod_image": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "pod_subtitle": {
+      "type": "text"
+    },
+    "hosts": {
+      "collection": "host",
+      "dominant": true,
+      "via": "podcasts"
+    },
+    "guests": {
+      "collection": "guest",
+      "via": "podcasts"
+    }
+  }
+}
