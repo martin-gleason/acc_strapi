@@ -6,10 +6,10 @@
       "settings": {
         "client": "postgres",
         "host": "acc-strapi-db.cv7ubu6fhdtz.us-east-2.rds.amazonaws.com",
-        "port": "${process.env.DATABASE_PORT || 27017}",
-        "database": "${process.env.DATABASE_NAME || 'strapi'}",
-        "username": "${process.env.DATABASE_USERNAME || 'psql'}",
-        "password": "${process.env.DATABASE_PASSWORD || 'BKdwvJcoKz*6K9*k7\\!ogz8Kv7MrdLMMZgDmcUvhx?'}"
+        "port": "5432",
+        "database": "strapi",
+        "username": "postgres",
+        "password": "wAqZk8MMUi2E6vmqa8GQ"
       },
       "options": {
         "ssl": false

@@ -1,6 +1,6 @@
 {
-  "host": "localhost",
-  "port": "${process.env.PORT || 1337}",
+  "host": "18.223.255.167",
+  "port": "1337",
   "production": true,
   "proxy": {
     "enabled": false
@@ -9,6 +9,10 @@
     "enabled": false
   },
   "admin": {
+    "path": "/dashboard",
+    "build": {
+      "backend": "18.223.255.167"
+    },
     "autoOpen": false
   }
 }
